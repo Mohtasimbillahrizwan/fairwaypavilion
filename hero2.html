@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairway Pavilion</title>
+
+ 
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .logo-wrapper {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .hero-content .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .about-section h2 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .about-section h3 {
+    font-size: 1.2em;
+  }
+
+  .about-section p,
+  .about-section ul {
+    font-size: 1em;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1em;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+
+
+
+
+
+
+    body {
+      margin: 0;
+      font-family: 'Fira Sans', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #bfa046;
+      
+    }
+
+    .logo2 {
+      font-weight: normal;
+      font-size: 0.8em;
+      color: #bfa046;
+      
+    }
+
+
+    .logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  gap: 4px; /* Space between logo and subtitle */
+   text-align: center; /* Center align the text */ 
+  
+ 
+} 
+
+
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 1em;
+    }
+    .cta {
+      background-color: #bfa046;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background: rgba(8, 8, 8, 0.4); /* optional for readability */
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-content .btn {
+  background-color: #bfa046;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+
+
+    footer {
+      background-color: #d4c3a4;
+      color: rgb(68, 70, 71);
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: rgb(68, 70, 71);
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+ 
+    .contact-form {
+      max-width: 600px;
+      margin: 30px auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #bfa046;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+.contact-form label {
+
+  padding: 10px 15px;
+  color:  #fffdfd;
+  font-size: 1.2em; 
+  border-radius: 5px;
+  background-color: #bfa046; /* Button color */
+ 
+}
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #fdf9f2; /* light cream or neutral bg */
+    color: #333;
+  }
+  
+  .about-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #bfa046;
+  }
+  
+  .about-section h3 {
+    margin-top: 30px;
+    color: #bfa046;
+  }
+  
+  .about-section p,
+  .about-section ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  .about-section ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+
+
+  </style>
+</head>
+<body>
+
+
+  
+  <header>
+   
+    <div class="logo-wrapper">
+      <div class="logo">FAIRWAY PAVILION</div> 
+      <div class="logo2">BANQUETING SUITE</div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Gallery</a>
+      <a href="#">Packages</a>
+      <a href="#">Testimonials</a>
+      <a class="cta" href="#">Book a Tour</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-image-wrapper">
+      <img src="fav.png" alt="Top Hero Image" class="hero-image">
+      <div class="hero-content">
+        <h1>Create Magical Memories at Fairway Pavilion</h1>
+        <p>Elegant Weddings Grand Celebrations Unforgettable Moments</p>
+        <a href="#" class="btn">Start Planning</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <section class="about-section">
+    <div class="container">
+      <h2>Why Choose Fairway Pavilion</h2>
+      <p>
+        The Fairway Pavilion is a peaceful purpose built wedding and event venue nestled within 120 acres of The West Middlesex Golf Club. It is situated in a secure, secluded location in west London between Ealing, Greenford and Southall. Fairway Pavilion offers an exceptional banqueting experience for weddings, receptions, and grand celebrations. Our elegant venue combines modern luxury with traditional charm, perfect for hosting memorable events.
+      </p>
+  
+      <h3>Our Services & Amenities</h3>
+      <ul>
+        <li>Spacious banquet hall with luxurious décor</li>
+        <li>Customizable wedding seating & dining arrangements</li>
+        <li>Indoor & outdoor buffet options</li>
+        <li>Stunning decoration themes & floral setups</li>
+        <li>BBQ, fireworks, chocolate fountain, bouncy castle & more</li>
+        <li>Free parking, bride & groom hospitality suites, guest arrangements</li>
+      </ul>
+  
+      <h3>Attractions</h3>
+      <p>
+        Our venue is surrounded by picturesque landscapes, ideal for photo sessions and outdoor celebrations. We also offer festive arrangements and recreation zones for guests of all ages.
+      </p>
+  
+      <h3>Cost Effectiveness</h3>
+      <p>
+        We offer premium services at competitive rates, tailored packages to fit every budget, and transparent pricing with no hidden costs.
+      </p>
+  
+      <h3>Why Fairway Pavilion?</h3>
+      <p>
+        Choose us for unmatched hospitality, customizable packages, a vibrant atmosphere, and a team dedicated to making your day truly special.
+      </p>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+  
+
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+   
+<div class="contact-form"> 
+
+     
+      <label>TO INQUIRY OUR SERVICES  </label>
+
+     
+</div>
+
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </div>
+  </footer>
+</body>
+</html>
